@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Week-5-Task</string>
+    <string name="invalidNo">Enter a valid no that starts with 234 or 0</string>
+    <string name="register">Register</string>
+    <string name="sex">Sex:</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email address</string>
+    <string name="welcome">Welcome</string>
+    <string name="full_name">Full Name</string>
+    <string name="edgeDesign">edgeDesign</string>
+    <string name="name">Name</string>
+    <string name="longe_tolulope">Longe Tolulope</string>
+    <string name="_08050599526">08050599526</string>
+    <string name="e_mail">E-mail</string>
+    <string name="tolulopelonge945_gmail_com">tolulopelonge945@gmail.com</string>
+    <string name="male">Male</string>
+    <string name="sex_">Sex</string>
+    <string name="profile_page">Profile Page</string>
+    <string name="designcontainer3">designContainer3</string>
+    <string name="designcontainer4">designContainer4</string>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>
