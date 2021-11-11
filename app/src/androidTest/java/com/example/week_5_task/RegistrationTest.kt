@@ -2,6 +2,7 @@ package com.example.week_5_task
 
 
 import androidx.test.espresso.Espresso.*
+import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -28,9 +29,9 @@ class RegistrationTest {
     fun registration_generatesNewUserProfileUponValidation_returnsTrue(){
 
         // When the following actions are performed
-        onView(withId(R.id.edtName)).perform(typeText(name))
-        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber))
-        onView(withId(R.id.edtE_mail)).perform(typeText(email))
+        onView(withId(R.id.edtName)).perform(typeText(name)).perform(ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber)).perform(ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.edtE_mail)).perform(typeText(email)).perform(ViewActions.closeSoftKeyboard())
         onView(withId(R.id.spinner)).perform(click())
         onData(allOf(`is`(instanceOf(String::class.java)),`is`(sex))).perform(click())
         onView(withId(R.id.spinner)).check(matches(withSpinnerText(sex)))
@@ -59,9 +60,9 @@ class RegistrationTest {
         // Given the following details
 
         // When the following actions are performed
-        onView(withId(R.id.edtName)).perform(typeText(name))
-        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber))
-        onView(withId(R.id.edtE_mail)).perform(typeText(email))
+        onView(withId(R.id.edtName)).perform(typeText(name)).perform(ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber)).perform(ViewActions.closeSoftKeyboard());
+        onView(withId(R.id.edtE_mail)).perform(typeText(email)).perform(ViewActions.closeSoftKeyboard());
         onView(withId(R.id.spinner)).perform(click())
         onData(allOf(`is`(instanceOf(String::class.java)),`is`(sex))).perform(click())
         onView(withId(R.id.btnRegister)).perform(click())
@@ -87,7 +88,7 @@ class RegistrationTest {
         val phoneNumber = "234$9*0538726"
 
         // When the following actions are performed
-        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber))
+        onView(withId(R.id.edt_phoneNumber)).perform(typeText(phoneNumber)).perform(ViewActions.closeSoftKeyboard())
         onView(withId(R.id.btnRegister)).perform(click())
 
         // Then the error message gets displayed
